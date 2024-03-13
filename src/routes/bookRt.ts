@@ -1,8 +1,9 @@
 import express from "express";
-import { indexHome } from "../controllers/bookCon";
+import { BOOK } from "../controllers/bookCon";
 
 export const bookRt: express.Router = express.Router();
-    bookRt.get("/", indexHome);
+    bookRt.post("/", BOOK.Create);
+    bookRt.get("/", BOOK.FetchAll);
 
 
 
